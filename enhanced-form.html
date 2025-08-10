@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enhanced Form</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.4;
+        margin: 20px;
+        max-width: 900px;
+      }
+      section {
+        margin-bottom: 2em;
+      }
+      fieldset {
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 6px;
+      }
+      label {
+        display: block;
+        margin-top: 0.5em;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+        box-sizing: border-box;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0.5em;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Demo: Lists, Table, Media & HTML5 Form</h1>
+    </header>
+
+    <section>
+      <h2>Lists</h2>
+      <ul>
+        <li>Semantic HTML</li>
+        <li>Accessible Forms</li>
+        <li>Native Validation</li>
+      </ul>
+      <ol>
+        <li>Step One</li>
+        <li>Step Two</li>
+        <li>Step Three</li>
+      </ol>
+      <dl>
+        <dt>autocomplete</dt>
+        <dd>Hints browser for autofill.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Table</h2>
+      <table>
+        <caption>
+          Plan Comparison
+        </caption>
+        <tr>
+          <th>Plan</th>
+          <th>Monthly</th>
+          <th>Users</th>
+        </tr>
+        <tr>
+          <td>Starter</td>
+          <td>$0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Pro</td>
+          <td>$12</td>
+          <td>5</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media</h2>
+      <figure>
+        <img src="hands-1283917_1280.jpg" alt="Sample image" width="300" />
+        <figcaption>Sample Image</figcaption>
+      </figure>
+      <audio controls>
+        <source src="lil-intimate-lost-without-you.mp3" type="audio/mpeg" />
+      </audio>
+      <video controls width="300">
+        <source src="MAKAMBI.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <section>
+      <h2>HTML5 Form</h2>
+      <form action="/submit" method="post">
+        <fieldset>
+          <legend>Account</legend>
+          <label
+            >Username
+            <input name="username" pattern="^[A-Za-z0-9_-]{3,20}$" required
+          /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <label
+            >Password
+            <input type="password" name="password" minlength="8" required
+          /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Details</legend>
+          <label>First Name <input name="fname" required /></label>
+          <label>Last Name <input name="lname" required /></label>
+          <label
+            >Phone
+            <input type="tel" name="phone" pattern="^\+?[0-9\s\-]{7,20}$"
+          /></label>
+          <label>Website <input type="url" name="website" /></label>
+          <label
+            >Birthdate
+            <input
+              type="date"
+              name="dob"
+              min="1900-01-01"
+              max="2025-12-31"
+              required
+          /></label>
+          <label>Fav Color <input type="color" name="color" /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label
+            >Plan
+            <select name="plan" required>
+              <option value="">Select...</option>
+              <option>Starter</option>
+              <option>Pro</option>
+            </select>
+          </label>
+          <label><input type="radio" name="ref" required /> Friend</label>
+          <label><input type="radio" name="ref" /> Search</label>
+          <label
+            ><input type="checkbox" name="interest" value="design" />
+            Design</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Extra</legend>
+          <label
+            >Avatar <input type="file" name="avatar" accept="image/*"
+          /></label>
+          <label
+            >Experience
+            <input type="number" name="exp" min="0" max="60" required
+          /></label>
+          <label
+            >Bio <textarea name="bio" maxlength="300" required></textarea>
+          </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </body>
+</html>
